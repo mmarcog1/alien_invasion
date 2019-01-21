@@ -19,11 +19,7 @@ def run_game():
         #Watch for keyboard and mouse events
         gf.check_events()
         
-        #Redraw the screen during each pass through the loop
-        screen.fill(ai_settings.bg_color)
-        ship.blitme()
-
-        #Make the most recent drawn screen visible.
-        pygame.display.flip()
+        #Redraw the screen during each pass through the loop make the most recent drawn screen visible.
+        gf.update_screen(ai_settings,screen,ship)
 
 run_game()
